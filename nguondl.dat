@@ -1,0 +1,3 @@
+SMCC không quét group kín hoặc những thông tin mang tính bí mật.
+Hệ thống sẽ quét toàn bộ text từ tiêu đề đến nội dung bài. Nếu bài viết và comment đều chứa từ khóa thì sẽ được tính là 2 kết quả.
+SMCC có quét dữ liệu trên các forum nhưng chỉ là dữ liệu ở dạng public. Nếu các dữ liệu ở dạng box ẩn, SMCC chỉ quét khi có yêu cầu đặc biệt từ phía khách hàng.
