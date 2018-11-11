@@ -4,7 +4,6 @@ import random
 from flask import Flask, request
 from pymessenger2 import Bot
 from pymessenger2 import QuickReply
-from wit import Wit
 import requests
 from pymessenger2.utils import AttrsEncoder
 import json
@@ -139,14 +138,14 @@ def process_message(mess_content, recipient_id):
         from otherInfo import otherInformations
         otherInformations(bot, recipient_id, user_memory, mess_content)
             
-def scan_content(mess_content):
-    client = Wit("7PMLK4MWS5T2XRWGAK4GRCZTFUDXHPVY")
-    resp = client.message(str(mess_content))
-    if 'intent' in resp['entities']:
-        for y in resp['entities']['intent']:
-            return str(y['value'])
-    else:
-        return None
+# def scan_content(mess_content):
+#     client = Wit("7PMLK4MWS5T2XRWGAK4GRCZTFUDXHPVY")
+#     resp = client.message(str(mess_content))
+#     if 'intent' in resp['entities']:
+#         for y in resp['entities']['intent']:
+#             return str(y['value'])
+#     else:
+#         return None
 def send_typing_on(recipient_id):
     payload = {
         'sender_action': 'typing_on'
